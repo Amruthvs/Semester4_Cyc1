@@ -1,0 +1,8 @@
+#!/bin/bash 
+echo "User : `echo $USER`"
+echo "logged in user : `who`"
+echo "SHELL:`echo $SHELL`"
+echo "Os Type: `echo $OSTYPE`"
+echo "Path: `echo $PATH`"
+echo "Current Directory : $(pwd)"
+echo "User Count:$(who -q)"
