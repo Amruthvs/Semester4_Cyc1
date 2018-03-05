@@ -1,0 +1,35 @@
+#!/bin/bash
+ch=1
+while true
+do
+	echo -e "1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Modulus\n6.Exit\n"
+	echo "Enter choice::"
+	read ch
+	case $ch in
+	1)
+		echo "Enter two numbers::"
+		read a b
+		echo "Sum = `expr $a + $b`";;
+	2)
+		echo "Enter two numbers::"
+		read a b
+		echo "Difference = `expr $a - $b`";;
+	3)
+		echo "Enter two numbers::"
+		read a b
+		echo "Product = `expr $a \* $b`";;
+	4)
+		echo "Enter two numbers::"
+		read a b
+		echo "Quotient = `expr $a / $b`";;
+	5)
+		echo "Enter two numbers::"
+		read a b
+		echo "Remainder = `expr $a % $b`";;
+	6)
+		exit;;
+	*)	
+		echo "Invalid choice";;
+	esac
+done
+	
