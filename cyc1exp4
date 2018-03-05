@@ -1,0 +1,21 @@
+#!/bin/bash
+s=$#
+if test $s -eq 2
+then
+	ls | cat>content 
+	m=`cat content|grep $1`
+	if test $m
+	then
+		p=`cat $1|grep $2`
+		if test $p
+		then
+			echo Username exists
+		else
+			echo -e "$2">>$1
+		fi
+	else
+		echo File does not exist
+	fi
+else
+	echo Incorrect argument count
+fi
