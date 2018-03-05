@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "OS Info:`uname -a`"
+echo "Kernal Version : `uname -v`"
+echo "Shell : `cat /etc/shells`"
+echo "Processor Type: `uname -p`"
+echo "Processor Speed: `lscpu | grep MHz`"
+echo "Cache Memory:`lscpu | grep cache`"
+echo "Harddrive Information: `lshw -class disc -class storage`"
+echo "Memory Information: `vmstat -s | grep memory`"
+echo "File System: `df -Th`"
